@@ -38,5 +38,18 @@ class leapYearTest {
 		
 		assertEquals(1,testObject.isLeapYear(2012));	//year not divisible by 400 and 100, but divisible by 4
 	}
+	
+	@Test
+	public void testLeapYear_t4No() throws Exception {		
+		
+		assertEquals(0,testObject.isLeapYear(2017));	//year not divisible by 400, 100 and 4
+	}
+	
+	@Test
+	public void testLeapYear_t5Yes() throws Exception {		
+		
+		assertEquals(1,testObject.isLeapYear(2016));	//year not divisible by 400 and 100, but divisible by 4
+	}
+	
 
 }
