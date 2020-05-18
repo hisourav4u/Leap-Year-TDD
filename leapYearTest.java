@@ -13,8 +13,9 @@ import org.junit.jupiter.api.Test;
 class leapYearTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void testLeapYearObject() throws Exception {
+		leapYearChecker testObject = new leapYearChecker();
+		assertNotNull(testObject);
 	}
 
 }
