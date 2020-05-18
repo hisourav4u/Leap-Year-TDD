@@ -1,12 +1,11 @@
 
-
 public class leapYearChecker {
 
-	public boolean isLeapYear(int year) {
+	public int isLeapYear(int year) {
 		if((year%400)==0)
-			return true;
+			return 1;
 		else
-			return false;
+			return 0;
 	}
 
 }

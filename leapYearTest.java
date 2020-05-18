@@ -2,6 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+
 /**
  * 
  */
@@ -12,12 +13,7 @@ import org.junit.jupiter.api.Test;
  */
 class leapYearTest {
 	
-	leapYearChecker testObject;
-	
-	public void setUp() {
-		
-		testObject = new leapYearChecker();
-	}
+	leapYearChecker testObject=new leapYearChecker();
 
 	@Test
 	public void testLeapYearObject() throws Exception {
@@ -26,9 +22,21 @@ class leapYearTest {
 	}
 	
 	@Test
-	public void testLeapYear_t1Yes() throws Exception {
+	public void testLeapYear_t1Yes() throws Exception {		
 		
-		assertTrue(testObject.isLeapYear(2000));
+		assertEquals(1,testObject.isLeapYear(2000));	//year divisible by 400
+	}
+	
+	@Test
+	public void testLeapYear_t2No() throws Exception {		
+		
+		assertEquals(0,testObject.isLeapYear(1700));	//year not divisible by 400 but divisible by 100
+	}
+	
+	@Test
+	public void testLeapYear_t3Yes() throws Exception {		
+		
+		assertEquals(1,testObject.isLeapYear(2012));	//year not divisible by 400 and 100, but divisible by 4
 	}
 
 }
